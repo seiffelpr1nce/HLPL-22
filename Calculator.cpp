@@ -1,17 +1,17 @@
 #include "std_lib_facilities.h"
 
 constexpr char number = '8'; // 8 means it is a number and the value dose not metter
-constexpr char quit = 'x'; // we can not use x as a variable because we used it as exit command
-constexpr char print = ';';   // for question 3 in Drill 6 we can not change ; to = because we already used it with char !!
+constexpr char quit = 'x'; // x is no longer a variable, but for quitting the program
+constexpr char print = ';';   // about  Q3-Drill 6,  we can not change ';' to '=' because we have already declared it with char
 constexpr char result = '=';
 //constexpr char let = 'L';
 constexpr char name = 'a';
-const string declkey = "#"; // changed the declaration keyword from let to #
+const string declkey = "#"; // declaration keyword from let to '#'
 constexpr char sq = 's';
-const string square_root = "sqrt"; // square root function
+const string square_root = "sqrt"; // square-root function
 constexpr char power = 'p';
 const string power_s = "pow"; // power function
-const string quitkey = "exit"; // we change 
+const string quitkey = "exit"; 
 
 
 double expression();
@@ -193,16 +193,16 @@ double square()
 	return sqrt(d);
 
 }
-// function to calculate the power >>>> pow(x,i) is Multiply x with it self i times
+// function to calculate the power >>>> pow(x,i) is Multiply x with itself i-times
 double POWER()
 {
 	Token t1 = ts.get();
-	if (t1.kind != '(') error(" ( expected !"); // we get '(' first because we have pow (
+	if (t1.kind != '(') error(" ( expected !"); // we get '(' first because we have pow 
 
 	double x = expression();
 	Token t = ts.get();
-	if (t.kind != ',') error(" , expected !"); //we get comma between the numbers to sapirate them
-	double i = narrow_cast<int>(expression()); // we cast to int because the power should be an ineger
+	if (t.kind != ',') error(" , expected !"); // we put comma between the numbers to separate them
+	double i = narrow_cast<int>(expression()); // casting to int because the power should be an integer
 
 
 	Token t2 = ts.get();
@@ -254,7 +254,7 @@ try {
 	cout << "- You can use the following operators (+, -, *, /, % , sqrt(num), pow(num,num)) followed by ; then press enter to print\n - you can exit the program by writeing x or exit and you can not use x as variable  \n";
 
 	define_name("pi", 3.1415926535);
-	define_name("k", 1000); //predifind number k = 1000
+	define_name("k", 1000);  //predifind number k = 1000 
 
 	calculate();
 
@@ -322,6 +322,7 @@ double term()
 			break;
 		case '%':
 		{
+			
 			/*
 			double d = primary();
 			if (d==0) error("Zero divider in %");
@@ -329,6 +330,8 @@ double term()
 			t = ts.get();
 			break;
 			*/
+			
+			
 			int i1 = narrow_cast<int>(left);
 			int i2 = narrow_cast<int>(primary());
 			if (i2 == 0) error("Zero divider in %");
