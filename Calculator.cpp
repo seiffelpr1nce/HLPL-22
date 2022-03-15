@@ -250,8 +250,8 @@ void calculate()
 int main()
 try {
 
-	cout << "Welcome to our simple calculator\n - Please enter expressions useing floating-point numbers" << endl;
-	cout << "- You can use the following operators (+, -, *, /, % , sqrt(num), pow(num,num)) followed by ; then press enter to print\n - you can exit the program by writeing x or exit and you can not use x as variable  \n";
+	cout << "Welcome to our simple calculator\n\n\n- Please enter expressions using floating-point numbers" << endl;
+	cout << "- You can use the following operators (+, -, *, /, % , sqrt(num), pow(num,num)) followed by ; then press enter to print\n- You can exit the program by writing x or exit and you can not use x as variable  \n";
 
 	define_name("pi", 3.1415926535);
 	define_name("k", 1000);  //predifind number k = 1000 
