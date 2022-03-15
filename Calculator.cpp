@@ -1,7 +1,7 @@
 #include "std_lib_facilities.h"
 
-constexpr char number = '8'; // 8 means it is a number and the value dose not metter
-constexpr char quit = 'x'; // x is no longer a variable, but for quitting the program
+constexpr char number = '8'; 
+constexpr char quit = 'x'; // x is no longer a variable, but for exiting the program
 constexpr char print = ';';   // about  Q3-Drill 6,  we can not change ';' to '=' because we have already declared it with char
 constexpr char result = '=';
 //constexpr char let = 'L';
@@ -10,7 +10,7 @@ const string declkey = "#"; // declaration keyword from let to '#'
 constexpr char sq = 's';
 const string square_root = "sqrt"; // square-root function
 constexpr char power = 'p';
-const string power_s = "pow"; // power function
+const string power_s = "pow"; 
 const string quitkey = "exit"; 
 
 
@@ -189,24 +189,24 @@ double declaration()
 double square()
 {
 	double d = expression();
-	if (d < 0) error("number is negative!"); // the number can not br negative and if the number is negative it shows error
+	if (d < 0) error("number is negative!"); // the number can't be -ve , and if so, it shows an error
 	return sqrt(d);
 
 }
-// function to calculate the power >>>> pow(x,i) is Multiply x with itself i-times
+// function to calculate the power -->>  pow(x,i) is Multiply x with itself i-times
 double POWER()
 {
 	Token t1 = ts.get();
-	if (t1.kind != '(') error(" ( expected !"); // we get '(' first because we have pow 
+	if (t1.kind != '(') error(" ( expected !"); // we put '(' first because we have pow 
 
 	double x = expression();
 	Token t = ts.get();
-	if (t.kind != ',') error(" , expected !"); // we put comma between the numbers to separate them
+	if (t.kind != ',') error(" , expected !"); // we put comma between the 2 numbers to separate them
 	double i = narrow_cast<int>(expression()); // casting to int because the power should be an integer
 
 
 	Token t2 = ts.get();
-	if (t2.kind != ')') error(" ) expected !"); //get ')' as a token to make sure it is the end of the function and we have no more inputs
+	if (t2.kind != ')') error(" ) expected !"); //get ')' as a token to make sure it is the end of the function and we have no more inputs left
 
 	return pow(x, i);
 
