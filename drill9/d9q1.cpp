@@ -54,9 +54,10 @@ try {
 
 	add_day(tomorrow, 1);  // add 1 to today to become tomorrow 
 
-	cout << today << endl;
+	cout << "Today is " << today << endl;
 			
-	cout << tomorrow << endl;
+	cout << "Tomorrow is " << tomorrow << endl;
+
 
 	// for invalid date
 		
