@@ -97,11 +97,11 @@ public:
 	
 try {
 	const Date today (1978, Month::jun, 25);
-	cout << "today is: " << today << endl;		// check today 
+	cout << "Today is: " << today << endl;		// check today 
 	
 	Date tomorrow = today; 
 	tomorrow.add_day(1);  	// add 1 to today to become tomorrow 
-	cout << "tomorrow is: " << tomorrow << endl;	// print tomorrow 
+	cout << "Tomorrow is: " << tomorrow << endl;	// print tomorrow 
 	
 	Date invalid(2004, Month::apr, -5);		// for Invalid dates
 	cout << invalid << endl;
