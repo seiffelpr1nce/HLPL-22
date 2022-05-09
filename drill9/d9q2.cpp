@@ -43,12 +43,12 @@ try
  {
 	// initiallizing today
 	Date today = {1978, 6, 25};
-	cout << " today is: " << today << endl;
+	cout << " Today is: " << today << endl;
 	
 	//checking tomorrow
 	Date tomorrow = today; //to give tomorrow's same value as today then add n over it
 	tomorrow.add_day(1);  // in that case n is 1 
-	cout << " tomorrow is: " << tomorrow << endl;   // print tomorrow ( today+1)
+	cout << " Tomorrow is: " << tomorrow << endl;   // print tomorrow ( today+1)
  		
 	
 	//checking invalid date
