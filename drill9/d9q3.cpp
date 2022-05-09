@@ -38,11 +38,11 @@ try
  { 
  	// initiallizing today
     Date today(1978, 6, 25);
-    cout << "today is: " << today << '\n';
+    cout << "Today is: " << today << '\n';
     
     Date tomorrow = today;
     tomorrow.add_day(1); // add 1 to tomorrow 
-    cout << "tomorrow is: " << tomorrow << '\n'; // print tomorrow ( today+1)
+    cout << "Tomorrow is: " << tomorrow << '\n'; // print tomorrow ( today+1)
    
      //checking invalid date
      Date invalid = {2004, 13, -5};
